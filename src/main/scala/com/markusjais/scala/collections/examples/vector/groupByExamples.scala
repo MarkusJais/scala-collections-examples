@@ -43,7 +43,7 @@ object groupByExamples extends App {
   val firstUniqueChar = str.find(str.groupBy(x => x)(_).length == 1).getOrElse(-1)
   println(firstUniqueChar)
 
-  // could write this in one line but using a temporary variable (charMap) is faster
+  // could write this in one line as above but using a temporary variable (charMap) is faster
   // because if groupBy is called within find then groupBy is called in each iteration and
   // this is less efficient
   val charMap = str.groupBy(x => x)
