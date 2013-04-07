@@ -3,7 +3,7 @@ package com.markusjais.scala.collections.examples.vector
 object groupByExamples extends App {
 
   val birds = Vector("Golden Eagle", "Gyrfalcon", "American Robin",
-    "Mountain BlueBird", "Mountain-Hawk Eagle")
+    "Mountain BlueBird", "Mountain Hawk-Eagle")
 
   // partition strings by first char                    
   val (startsWithM, startsWithoutM) = birds.partition(_.startsWith("M"))
