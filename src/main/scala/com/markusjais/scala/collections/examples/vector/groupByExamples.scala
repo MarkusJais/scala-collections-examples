@@ -40,15 +40,20 @@ object groupByExamples extends App {
 
   // find first unique charactor in a string
   val str = "eagle"
-  val firstUniqueChar = str.find(str.groupBy(x => x)(_).length == 1).getOrElse(-1)
+  val firstUniqueChar = str.find(str.groupBy(x => x)(_).length == 1).getOrElse("None")
   println(firstUniqueChar)
 
   // could write this in one line as above but using a temporary variable (charMap) is faster
   // because if groupBy is called within find then groupBy is called in each iteration and
   // this is less efficient
   val charMap = str.groupBy(x => x)
-  val firstUniqueChar2 = str.find(charMap(_).length == 1).getOrElse(-1)
+  val firstUniqueChar2 = str.find(charMap(_).length == 1).getOrElse("None")
   println(firstUniqueChar2)
+  
 
 }
+
+
+
+
 
