@@ -38,7 +38,7 @@ object groupByExamples extends App {
   val mostCommon = numbers.groupBy(x => x).mapValues(_.size).maxBy(_._2)._1
   println(mostCommon)
 
-  // find first unique charactor in a string
+  // find first unique character in a string
   val str = "eagle"
   val firstUniqueChar = str.find(str.groupBy(x => x)(_).length == 1).getOrElse("None")
   println(firstUniqueChar)
