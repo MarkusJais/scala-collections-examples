@@ -1,7 +1,7 @@
 import sbt._
 import sbt.Keys._
 
-object collections_talk_Build extends Build {
+object scala_collections_examples extends Build {
 
   lazy val scala_collections_examples = Project(
     id = "scala-collections-examples",
